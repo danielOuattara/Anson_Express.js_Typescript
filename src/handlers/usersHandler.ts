@@ -1,18 +1,18 @@
 import { RequestHandler, Request, Response } from "express";
 
-export const getUserById: RequestHandler = (_req, res) => {
-  res.send("One user ");
-};
-
 export function getUsers(_req: Request, res: Response) {
   res.send("User List");
 }
 
+export const getUserById: RequestHandler = (_req, res) => {
+  res.send("One user ");
+};
+
 export function createUser(
-  _req: Request<{}, {}, IUserRequest, IQParams>,
-  res: Response<IUserResponse>,
+  req: Request<{}, {}, ICreateUserRequest, ICreateUserQueryParams>,
+  res: Response<ICreateUserResponse>,
 ) {
-  // console.log(req.body.email);
-  // req.query.loginUponCreated = false;
+  console.log(req.body.email); // string
+  req.query.loginUponCreated = false; // boolean
   res.send({ email: "email@user.com", id: "1", username: "John Doe" });
 }

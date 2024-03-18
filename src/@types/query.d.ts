@@ -1,3 +1,3 @@
-interface IQParams {
+interface ICreateUserQueryParams {
   loginUponCreated?: boolean;
 }
