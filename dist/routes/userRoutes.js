@@ -5,4 +5,5 @@ const usersHandler_1 = require("../handlers/usersHandler");
 const router = (0, express_1.Router)();
 router.get("/", usersHandler_1.getUsers);
 router.get("/:userId", usersHandler_1.getUserById);
+router.post("/", usersHandler_1.createUser);
 exports.default = router;
