@@ -16,3 +16,9 @@ export function createUser(
   req.query.loginUponCreated = false; // boolean
   res.send({ email: "email@user.com", id: "1", username: "John Doe" });
 }
+
+export const updateUser: RequestHandler = (req, res) => {
+  req.customField; // string | undefined
+  req.url; // string | undefined
+  res.send("One user ");
+};
