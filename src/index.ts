@@ -1,8 +1,4 @@
-import express, {
-  NextFunction,
-  Request,
-  Response /*,  { NextFunction, Request, Response } */,
-} from "express";
+import express, { NextFunction, Request, Response } from "express";
 import userRouter from "./routes/userRoutes";
 
 const app = express();
