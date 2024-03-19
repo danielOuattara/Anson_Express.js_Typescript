@@ -18,9 +18,27 @@ export function createUser(
 }
 
 export const updateUser: RequestHandler = (req, res) => {
-  req.customField; // string | undefined
   req.url; // string | undefined
+
+  /**
+   * Request interface extension using custom types
+   */
+  req.customField; // string | undefined
+
+  /**
+   * Request interface extension with express-session package types
+   */
   req.session;
   req.sessionID;
+
+  /**
+   * Request interface extension with passport package types
+   */
+  req.logOut;
+  req.isAuthenticated;
+
+  /**
+   * Response
+   */
   res.send("One user ");
 };
