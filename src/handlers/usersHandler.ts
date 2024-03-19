@@ -20,5 +20,7 @@ export function createUser(
 export const updateUser: RequestHandler = (req, res) => {
   req.customField; // string | undefined
   req.url; // string | undefined
+  req.session;
+  req.sessionID;
   res.send("One user ");
 };
