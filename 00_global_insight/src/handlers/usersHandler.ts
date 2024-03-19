@@ -1,7 +1,7 @@
 import { RequestHandler, Request, Response } from "express";
 
 export function getUsers(_req: Request, res: Response) {
-  res.send("User List");
+  res.send([]);
 }
 
 export const getUserById: RequestHandler = (_req, res) => {

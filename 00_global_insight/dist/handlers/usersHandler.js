@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.updateUser = exports.createUser = exports.getUserById = exports.getUsers = void 0;
 function getUsers(_req, res) {
-    res.send("User List");
+    res.send([]);
 }
 exports.getUsers = getUsers;
 const getUserById = (_req, res) => {

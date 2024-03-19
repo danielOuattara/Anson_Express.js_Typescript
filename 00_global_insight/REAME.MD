@@ -16,3 +16,7 @@
 - 59:45 - Unit Tests with Jest and TS
 - 1:08:25 - Integration Tests with Supertest
 - 1:20:45 - Integration Tests
+
+```bash
+npx ts-jest config:init
+```
