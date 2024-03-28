@@ -30,19 +30,16 @@ interface IReqQuery {
   value?: string;
 }
 
-app.get(
-  "/api/v1/users",
-  (req: Request<{}, {}, {}, IReqQuery>, res: Response) => {
-    const filter = req.query.filter;
-    const value = req.query.value;
+app.get("/api/v1/users", (req: Request<{}, {}, {}, IReqQuery>, res) => {
+  const filter = req.query.filter;
+  const value = req.query.value;
 
-    if (filter && value) {
-      const newUsers = users.filter((user) => user[filter].includes(value));
-      return res.send(newUsers);
-    }
-    return res.send(users);
-  },
-);
+  if (filter && value) {
+    const newUsers = users.filter((user) => user[filter].includes(value));
+    return res.send(newUsers);
+  }
+  return res.send(users);
+});
 
 app.get("/api/v1/products", (_req, res) => {
   return res.json({ products });
