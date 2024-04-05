@@ -1,0 +1,63 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.patchUserValidationSchema = exports.putUserValidationSchema = void 0;
+exports.putUserValidationSchema = {
+    name: {
+        isString: true,
+        isLength: {
+            options: {
+                min: 2,
+                max: 20,
+            },
+            errorMessage: "name min-length: 2 & max-length: 12",
+        },
+        notEmpty: {
+            errorMessage: "name cannot be empty",
+        },
+    },
+    username: {
+        isString: {
+            errorMessage: "username cannot be empty",
+        },
+        isLength: {
+            options: {
+                min: 2,
+                max: 20,
+            },
+            errorMessage: "name min-length: 2 & max-length: 12",
+        },
+        notEmpty: {
+            errorMessage: "name & username cannot be empty",
+        },
+    },
+};
+exports.patchUserValidationSchema = {
+    name: {
+        isString: true,
+        isLength: {
+            options: {
+                min: 2,
+                max: 20,
+            },
+            errorMessage: "name min-length: 2 & max-length: 12",
+        },
+        notEmpty: {
+            errorMessage: "name cannot be empty",
+        },
+    },
+    username: {
+        isString: {
+            errorMessage: "username cannot be empty",
+        },
+        isLength: {
+            options: {
+                min: 2,
+                max: 20,
+            },
+            errorMessage: "name min-length: 2 & max-length: 12",
+        },
+        notEmpty: {
+            errorMessage: "name & username cannot be empty",
+        },
+    },
+};
