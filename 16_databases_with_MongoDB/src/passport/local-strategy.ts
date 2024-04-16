@@ -1,6 +1,7 @@
 import passport from "passport";
 import { Strategy } from "passport-local";
 import User from "../mongoose/schema/user.schema";
+import { Types } from "mongoose";
 
 //-------
 
@@ -31,7 +32,7 @@ passport.serializeUser((user, done) => {
 
 //--------------------------
 
-passport.deserializeUser(async function (id: number, done) {
+passport.deserializeUser(async function (id: Types.ObjectId, done) {
   try {
     const user = await User.findById(id);
     if (!user) {
